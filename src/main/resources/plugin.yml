@@ -1,0 +1,4 @@
+name: ViaBackwardsAutoUpdate
+version: '${project.version}'
+main: me.adarsh.autoupdate2.AutoUpdate
+author: [ Adarsh ]
