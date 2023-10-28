@@ -16,7 +16,7 @@ public class AutoUpdate extends JavaPlugin implements IPlugin {
 
     @Override
     public void sendToConsole(String message) {
-        getServer().sendToConsole(message);
+        getServer().getConsoleSender().sendMessage(message);
     }
 
     @Override

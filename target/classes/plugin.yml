@@ -1,0 +1,4 @@
+name: ViaBackwardsAutoUpdate
+version: '1.0'
+main: me.adarsh.autoupdate2.AutoUpdate
+author: [ Adarsh, Hazmad_ ]
