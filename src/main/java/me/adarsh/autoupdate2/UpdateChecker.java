@@ -54,9 +54,6 @@ public class UpdateChecker implements Runnable {
 
                 // New update!
                 installUpdate(oldJar, fileName, relativePath);
-
-                // Restart the server to apply the update
-                viaBackwardsAutoUpdate.startRestartCountdown();
             }
 
 
