@@ -5,11 +5,11 @@ import java.io.File;
 public interface IPlugin {
 
     /**
-     * Broadcast a message to all players connected to the server
+     * Sends any additional output messages to console
      *
-     * @param message The message to broadcast
+     * @param message The message to send to console
      */
-    public void broadcastMessage(String message);
+    public void sendToConsole(String message);
 
     /**
      * Run an asynchronous task at a later point in time
@@ -18,11 +18,6 @@ public interface IPlugin {
      * @param seconds The number of seconds into the future to run the task
      */
     public void runTaskLaterAsync(Runnable runnable, long seconds);
-
-    /**
-     * Restarts the server
-     */
-    public void restart();
 
     /**
      * Get the Via Backwards jar file in the plugins directory
