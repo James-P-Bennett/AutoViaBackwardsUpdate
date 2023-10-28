@@ -15,28 +15,14 @@ public class AutoUpdate extends JavaPlugin implements IPlugin {
     }
 
     @Override
-    public void broadcastMessage(String message) {
-        getServer().broadcastMessage(message);
+    public void sendToConsole(String message) {
+        getServer().sendToConsole(message);
     }
 
     @Override
     public void runTaskLaterAsync(Runnable runnable, long seconds) {
         long ticks = seconds*20;
         getServer().getScheduler().runTaskLaterAsynchronously(this, runnable, ticks);
-    }
-
-    @Override
-    public void restart() {
-        try {
-            // Use spigot's restart() method if it exists
-            if (getServer().getClass().getMethod("spigot") != null) {
-                getServer().spigot().restart();
-                return;
-            }
-        } catch (NoSuchMethodException expected) {}
-
-        // Otherwise assume the server knows how to restart itself
-        getServer().shutdown();
     }
 
     @Override
